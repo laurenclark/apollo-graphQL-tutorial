@@ -19,3 +19,18 @@ const typeDefs = gql`
         books: [Book]
     }
 `;
+
+// This snippet defines a simple data set that clients can query.
+// Notice that the two objects in the array each match the structure
+// of the book type we defined in our schema.
+
+const books = [
+    {
+        title: 'Harry Potter and the Chamber of Secrets',
+        author: 'J.K. Rowling'
+    },
+    {
+        title: 'Jurassic Park',
+        author: 'Michael Crichton'
+    }
+];
