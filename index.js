@@ -34,3 +34,20 @@ const books = [
         author: 'Michael Crichton'
     }
 ];
+
+// We've defined our data set, but Apollo Server doesn't know
+// that it should use that data set when it's executing a query.
+// To fix this, we create a resolver.
+
+// Resolvers tell Apollo Server how to fetch the data associated
+// with a particular type.Because our Book array is hardcoded,
+// the corresponding resolver is straightforward.
+
+// Resolvers define the technique for fetching the types defined in the
+// schema. This resolver retrieves books from the "books" array above.
+
+const resolvers = {
+    Query: {
+        books: () => books
+    }
+};
