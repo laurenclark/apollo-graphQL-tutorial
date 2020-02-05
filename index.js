@@ -1,5 +1,10 @@
 const { ApolloServer, gql } = require('apollo-server');
 
+/*--------------------------------------------------------------
+## Schema (type definitions)
+- https://www.apollographql.com/docs/apollo-server/schema/schema/
+--------------------------------------------------------------*/
+
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
 // your data.
@@ -20,6 +25,11 @@ const typeDefs = gql`
     }
 `;
 
+/*--------------------------------------------------------------
+## Data Set (manifest) 
+- https://www.apollographql.com/docs/apollo-server/data/data-sources/
+--------------------------------------------------------------*/
+
 // This snippet defines a simple data set that clients can query.
 // Notice that the two objects in the array each match the structure
 // of the book type we defined in our schema.
@@ -34,6 +44,11 @@ const books = [
         author: 'Michael Crichton'
     }
 ];
+
+/*--------------------------------------------------------------
+## Resolver
+- https://www.apollographql.com/docs/apollo-server/data/data/
+--------------------------------------------------------------*/
 
 // We've defined our data set, but Apollo Server doesn't know
 // that it should use that data set when it's executing a query.
